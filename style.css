@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #2193b0, #6dd5ed);
+}
+
+.left-column, .middle-column, .right-column{
+    padding: 20px;
+    box-sizing: border-box;
+}
+/* Left Column */
+.left-column{
+    width: 25%;
+    background: linear-gradient(135deg, #ee9ca7, #ffdde1);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.trip-list{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 50px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 25px;
+}
+
+.trip-title-head{
+    color: pink;
+    font-size: 45px;
+    display: flex;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-weight: 14px;
+    margin: 10px 0 10px 0;
+    width: 100%;
+}
+
+.tripButton{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color: #ffb7c5;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    display: block;
+    margin: auto;
+}
+
+.popupButton{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color: #fff;
+    color: #ffb7c5;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    display: block;
+    margin: auto;
+}
+
+.popup{
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 380px;
+    padding: 20px 30px;
+    background: #ffb7c5;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 25px;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 20ms;
+}
+
+.popup.active{
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 20ms;
+}
+
+.popup .close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.popup .form h2{
+    text-align: center;
+    color: #222;
+    margin: 10px 0px 20px;
+    font-size: 25px;
+}
+
+.popup .form .form-element{
+    margin: 15px 0px;
+}
+
+.deleteBtn{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 22px;
+    color: #555;
+    border-radius: 50%;
+}
+.deleteBtn:hover{
+    color:black;
+}
+
+.accordion{
+    margin: 60px auto;
+}
+
+.accordion li{
+    user-select: none;
+    cursor: pointer;
+    list-style: none;
+    width: 100%;
+    margin: 30px 0 30px 0;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), 
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7)
+}
+
+.accordion li:hover{
+    background-color: #B8DAD9;
+    border-radius: 8px;
+}
+
+.trip-header{
+    position: relative;
+    padding: 10px;
+    border: 1 solid #2193b0;
+    margin: 5px 0;
+}
+
+/*Middle Column*/
+.middle-column{
+    width: 50%;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.navbar {
+    background-color: #FFD1DC;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar li{
+    padding: 14px 150px;
+}
+
+.navbar li a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar li a:hover{
+    background-color: #B8DAD9;
+    color: black;
+    border-radius: 25px;
+}
+
+.welcome{
+    text-align: center;
+    padding: 50px 0 0 0;
+    font-size: 20px;
+}
+/*Right Column*/
+.right-column{
+    width: 25%;
+    background-color: #f9f9f9;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    overflow-y: auto;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.map{
+    text-align: center;
+}

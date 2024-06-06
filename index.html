@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Trip Planner</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+
+        <!--Left Column-->
+        <div class="left-column">
+            <div class="trip-list">
+                <h2 class="trip-title-head">Our Trip Planner 💕🛫</h2>
+                <div>
+                    <button class="tripButton show-form">Add</button>
+                </div>
+                <div id="popup" class="popup">
+                    <div class="close-btn">&times;</div>
+                    <div class="form">
+                        <h2>Add a New Trip</h2>
+                        <div class="form-element row">
+                            <input type="text" id="tripName" placeholder="Enter Location">
+                        </div>
+                        <div class="form-element row">
+                            <input type="text" id="dateArrive" placeholder="Enter Arrival Date">
+                        </div>
+                        <div class="form-element row">
+                            <input type="text" id="dateLeave" placeholder="Enter Departure Date">
+                        </div>
+                        <div>
+                            <button onclick="addTrip()" class="popupButton">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <ul id="list-container" class="accordion">
+    
+                </ul>
+            </div>
+        </div>
+
+        <!--Middle Column-->
+        <div class="middle-column">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#" onclick="showItinerary()">Itinerary</a></li>
+                    <li><a href="#" onclick="showChecklist()">Check List</a></li>
+                </ul>
+            </nav>
+            <div id="middle-content">
+                <p class="welcome">Select an option from the navbar</p>
+            </div>
+        </div>
+
+        <!--Right Column-->
+        <div class="right-column">
+            <p class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6566299.995976075!2d137.9672794972151!3d36.525140792671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34674e0fd77f192f%3A0xf54275d47c665244!2sJapan!5e0!3m2!1sen!2sus!4v1717118340504!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
